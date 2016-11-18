@@ -4,6 +4,7 @@ $color_content1:#999;
 $color_border:#e9e9e9;
 $color_red:#ff4049;
 $color_green:#64bd1e;
+$bg_white:#fff;
 
 .active{color:$color_red;}
 .color_title{color:$color_title;}
@@ -12,3 +13,4 @@ $color_green:#64bd1e;
 .color_border{color:$color_border;}
 .color_red{color:$color_red;}
 .color_green{color:$color_green;}
+.bg_white{background-color: $bg_white !important;}

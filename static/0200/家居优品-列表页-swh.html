@@ -15,11 +15,42 @@
 	<link rel="stylesheet" type="text/css" href="css/style3.min.css" />
 </head>
 
-<body>
+<body class="bg_white">
 
-	<div class="content">
+	<div class="content daigou">
 		
+		<div class="box1 lazy">
+			 <img data-original="img/dijiadaigou/pic1.jpg" src="http://icon.carimg.com//static/0200/blank.gif!c" class="lazy_img auto">
+		</div>
 		
+		<div class="box2">
+			<dl class="title tc">
+				<dt class="f15">花1分钟时间，省下好几千</dt>
+				<dd><span class="pr"><i class="iconfont icon-27kongxintaoxin"></i></span></dd>
+			</dl>
+			<div class="lazy">
+				<img data-original="img/dijiadaigou/pic2.jpg" src="http://icon.carimg.com//static/0200/blank.gif!c" class="lazy_img auto">
+			</div>
+		</div>
+		
+		<div class="box3">
+			<dl class="title tc">
+				<dt class="f15">顶级合作，直达底价</dt>
+				<dd><span class="pr"><i class="iconfont icon-27kongxintaoxin"></i></span></dd>
+			</dl>
+			<div class="lazy">
+				<img data-original="img/dijiadaigou/pic3.jpg" src="http://icon.carimg.com//static/0200/blank.gif!c" class="lazy_img auto">
+			</div>
+		</div>
+		<div class="box4">
+			<dl class="title tc">
+				<dt class="f15">同样的品质，更低的价格</dt>
+				<dd><span class="pr"><i class="iconfont icon-27kongxintaoxin"></i></span></dd>
+			</dl>
+			<div class="lazy">
+				<img data-original="img/dijiadaigou/pic4.jpg" src="http://icon.carimg.com//static/0200/blank.gif!c" class="lazy_img auto">
+			</div>
+		</div>
 		
 	</div>
 	
@@ -30,6 +61,12 @@
 	<script type="text/javascript">
 		$(function() {
 			
+			if(jiaju.url_attr('isapp')==1){
+				//如果是app
+				wjkjNative.jumpTo(JSON.stringify({'wjapp_open_native':{'native_type':1}}));
+			}else{
+				
+			};
 		});
 	</script>
 </body>
