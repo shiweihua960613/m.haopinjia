@@ -1,0 +1,53 @@
+.huodong_list{
+    //商家-活动列表
+    width: 5.8rem;
+    height: 4.36rem;
+    .lazy{
+        width: 5.8rem;
+        height: 4.36rem;
+    }
+    p.zhuangtai{
+        width: 50px;
+        height: 24px;
+        line-height: 24px;
+        color: #fff;
+        background: #ff5643;
+        left: 0;
+        top: 10px;
+        &:before{
+            content: '';
+            border-style: solid;
+            border-width: 12px 10px 12px 0;
+            border-color: #ff5643 transparent;
+            position: absolute;
+            right: -10px;
+            top: 0;
+        }
+        span{
+            display: inline-block;
+            width: 46px;
+            border: 1px solid #fff;
+            border-width: 1px 0;
+            line-height: 16px;
+        }
+        &.no{
+            background: #a1a1a1;
+            &:before{
+                border-color: #a1a1a1 transparent;
+            }
+        }
+    }
+    p.ellipsis{
+        left: 0;
+        bottom: 0;
+        line-height: 30px;
+        padding: 0 10px;
+        color: #fff;
+        width: 5.8rem;
+        background:-webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+        background:-moz-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+        background:-o-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+        background:-webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 1)));
+        background:linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));  
+    }
+}

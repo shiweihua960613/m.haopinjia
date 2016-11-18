@@ -1,0 +1,296 @@
+//share ==> yanhw
+
+.social-share {
+    // .icon-tencent:before {
+    //     content: "\e62d";
+    // }
+    // .icon-wechat:before {
+    //     content: "\e630";
+    // }
+    // .icon-douban:before {
+    //     content: "\e62a";
+    // }
+    //.icon-heart:before { content: "\f20a"; }
+    //.icon-like:before { content: "\f00a"; }
+    .icon-qzone:before {
+        content: "\e631";
+    }
+    //.icon-linkedin:before { content: "\f01a"; }
+    //.icon-diandian:before { content: "\f05a"; }
+    //.icon-facebook:before { content: "\f03a"; }
+    //.icon-google:before { content: "\f04a"; }
+    //.icon-twitter:before { content: "\f06a"; }
+    .social-share-icon {
+        position: relative;
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+        font-size: 30px;
+        border-radius: 50%;
+        line-height: 44px;
+        margin: 10px;
+        border: 1px solid #666;
+        color: #666;
+        text-align: center;
+        vertical-align: middle;
+        transition: background 0.6s ease-out 0s;
+        @extend .iconfont;
+
+        &:active {
+            background: #666;
+            color: #fff;
+        }
+    }
+
+    .icon-weibo {
+        //      color: #ff763b;
+
+        &:before {
+            content: "\e625";
+        }
+        color: #fff;
+        border-color: #ff763b;
+        background-color: #ff763b;
+
+        &:active {
+            background: #ff763b;
+        }
+    }
+
+    .icon-tencent {
+        //      color: #56b6e7;
+        color: #fff;
+        border-color: #56b6e7;
+        background-color: #56b6e7;
+        display: none!important;
+
+        &:active {
+            background: #56b6e7;
+        }
+    }
+
+    .icon-qq {
+        color: #fff;
+        background-color: #56b6e7;
+        border-color: #56b6e7;
+        &:before {
+            content: "\e626";
+        }
+        &:active {
+            background: #56b6e7;
+        }
+    }
+
+    .icon-qzone {
+        color: #fff;
+        background-color: #FDBE3D;
+        border-color: #FDBE3D;
+        &:before {
+            content: "\e644";
+        }
+        &:active {
+            background: #FDBE3D;
+        }
+    }
+
+    .icon-douban {
+        color: #33b045;
+        border-color: #33b045;
+
+        &:active {
+            background: #33b045;
+        }
+    }
+
+    .icon-linkedin {
+        color: #0077B5;
+        border-color: #0077B5;
+
+        &:active {
+            background: #0077B5;
+        }
+    }
+
+    .icon-facebook {
+        color: #44619D;
+        border-color: #44619D;
+
+        &:active {
+            background: #44619D;
+        }
+    }
+
+    .icon-google {
+        color: #db4437;
+        border-color: #db4437;
+
+        &:active {
+            background: #db4437;
+        }
+    }
+
+    .icon-twitter {
+        color: #55acee;
+        border-color: #55acee;
+
+        &:active {
+            background: #55acee;
+        }
+    }
+
+    .icon-diandian {
+        color: #307DCA;
+        border-color: #307DCA;
+
+        &:active {
+            background: #307DCA;
+        }
+    }
+
+    .icon-wechat {
+        position: relative;
+        color: #7bc549;
+        border-color: #7bc549;
+
+        &:active {
+            background: #7bc549;
+        }
+    }
+
+    .icon-wechat .wechat-qrcode {
+        display: none;
+        left: 50%;
+        top: 50%;
+        margin-left: -100px;
+        margin-top: -220px;
+        border: 1px solid #eee;
+        position: fixed;
+        z-index: 300;
+        width: 200px;
+        height: 200px;
+        color: #666;
+        font-size: 12px;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 2px 10px #aaa;
+    }
+
+    .icon-wechat .wechat-qrcode h4 {
+        font-weight: normal;
+        height: 26px;
+        line-height: 26px;
+        font-size: 12px;
+        background-color: #f3f3f3;
+        margin: 0;
+        padding: 0;
+        color: #777;
+    }
+
+    .icon-wechat .wechat-qrcode .qrcode {
+        width: 105px;
+        margin: 10px auto;
+    }
+
+    .icon-wechat .wechat-qrcode .qrcode table {
+        margin: 0 !important;
+    }
+
+    .icon-wechat .wechat-qrcode .help p {
+        font-weight: normal;
+        line-height: 16px;
+        padding: 0;
+        margin: 0;
+    }
+    //  .icon-wechat .wechat-qrcode:after { //      content: ''; //      position: absolute; //      left: 50%; //      margin-left: -6px; //      bottom: -13px; //      width: 0; //      height: 0; //      border-width: 8px 6px 6px 6px; //      border-style: solid; //      border-color: #fff transparent transparent transparent; // }
+    //  .icon-wechat:active .wechat-qrcode { //      display: block; // }
+}
+
+div.qrcode img {
+    height: auto !important;
+}
+
+div.share_body {
+    position: fixed;
+    z-index: 130;
+    height: 100%;
+    top: 0;
+    display: none;
+}
+
+div.social-share {
+    padding: 10px;
+    opacity: 0;
+    text-align: center;
+    -webkit-animation: fadeInUp 0.5s forwards alternate;
+    animation: fadeInUp 0.5s forwards alternate;
+    position: absolute;
+    z-index: 30;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    a.social-share-icon {
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+section.erweima {
+    position: fixed;
+    display: none;
+    z-index: 120;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    div {
+        opacity: 0;
+        -webkit-animation: fadeInUp 0.5s forwards alternate;
+        animation: fadeInUp 0.5s forwards alternate;
+        position: absolute;
+        left: 50%;
+        box-shadow: 0 2px 10px #aaa;
+        top: 50%;
+        overflow: hidden;
+        margin-left: -100px;
+        margin-top: -120px;
+        width: 200px;
+        padding: 10px;
+        background-color: #fff;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto !important;
+        }
+
+        span {
+            color: #333;
+            font-size: 12px;
+            line-height: 1.5;
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
+.right_top_btn {
+    color: #fff;
+    position: fixed;
+    z-index: 31;
+    left: 50%;
+    top: 12px;
+    white-space: nowrap;
+    margin-left: 3.2rem;
+    -webkit-transform: translate(-120%, 0);
+    font-size: 13px;
+}

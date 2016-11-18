@@ -1,0 +1,65 @@
+//白色背景
+.bg_f { background-color: #fff !important; }
+
+//边框
+.border_b { border-bottom: 1px solid $color_border; }
+.border_t { border-top: 1px solid $color_border; }
+.border_l { border-left: 1px solid $color_border; }
+.border_r { border-right: 1px solid $color_border; }
+
+//文字超出省略
+.ellipsis { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; display: block; }
+.ellipsis2 { display: block; @include line_over(2); }
+
+//禁止选中
+.no_select { user-select: none; -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; }
+
+//溢出控制
+.over_y { overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.over_x { overflow-y: hidden; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+//弹性盒模型
+.box { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+.flex1 { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; box-flex: 1; flex: 1; overflow: hidden;display:block; }
+
+//禁用状态
+[disabled],.disabled{opacity:.5;}
+
+//清浮动
+.clearfix:after{ content: ''; display: block; clear: both; height: 0; visibility: hidden; }
+
+//定位
+.pr { position: relative !important; }
+.pa { position: absolute !important; }
+
+//浮动
+.fl { float: left !important; }
+.fr { float: right !important; }
+
+//字号
+.f12 { font-size: 12px; }
+.f13 { font-size: 13px; }
+.f14 { font-size: 14px; }
+.f15 { font-size: 15px; }
+.f16 { font-size: 16px; }
+.f17 { font-size: 17px; }
+.f18 { font-size: 18px; }
+.f19 { font-size: 19px; }
+.f20 { font-size: 20px; }
+
+//对齐
+.tl { text-align: left !important; }
+.tr { text-align: right !important; }
+.tc { text-align: center !important; }
+
+//间距
+.mt5{margin-top:5px;}
+.mt5{margin-top:10px;}
+.mt5{margin-top:15px;}
+.mt5{margin-top:20px;}
+.mt5{margin-top:25px;}
+.mt5{margin-top:30px;}
+.mt5{margin-top:35px;}
+.mt5{margin-top:40px;}
+
+

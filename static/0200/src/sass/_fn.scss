@@ -1,0 +1,32 @@
+$url:"http://icon.carimg.com/m/0201/";
+
+//transition
+@mixin tran($a:all, $b:ease, $c:.3s,$d:0s) {
+    transition: $a $b $c $d;
+    -moz-transition: $a $b $c $d;
+    -webkit-transition:$a $b $c $d;
+}
+
+
+@mixin animation($a){
+	animation:$a;
+    -moz-animation:$a;
+    -webkit-animation:$a;
+
+}
+
+@mixin transform($a) {
+    transform: $a;
+    -moz-transform: $a;
+    -webkit-transform: $a;
+    -ms-transform: $a;
+}
+
+@mixin line_over($num:2) {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $num;
+}

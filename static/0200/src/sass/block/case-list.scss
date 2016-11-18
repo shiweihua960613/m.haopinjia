@@ -1,0 +1,83 @@
+.case-list{
+    a.list{
+        display: block;
+        div.lazy.pic{
+            width: 100%;
+            height:4.35rem;
+            div.nums{
+                position: absolute;
+                bottom:0;
+                height: 27px;
+                line-height: 27px;
+                padding:0 4px;
+                background-color: rgba(0,0,0,0.4);
+                left:0;
+                color: #fff;
+                width: 100%;
+                span{
+                    display: inline-block;
+                    padding-right: 2px;
+                }
+                i.iconfont{
+                    display: inline-block;
+                    margin:0 3px;
+                    @include transform(scale(1.2));
+                    &.icon-xihuan{
+                        @include transform(scale(1.1));
+
+                    }
+                }
+            }
+
+        }
+        div.fonts{
+            padding:10px;
+            position: relative;
+            border:1px solid $color_border;
+            border-top:none;
+            div.flex1{
+                em{
+                    color: $color_title;
+                    margin-bottom:4px;
+                }
+                span{
+                    color: $color_content;
+                    i{
+                        padding-right:5px;
+                        border-right:1px solid $color_content;
+                        margin-right:5px;
+                        line-height: 1em;
+                        &:last-of-type{
+                            border:none;
+                        }
+                    }
+                }
+            }
+            .right{
+                width: 50px;
+                min-height: 35px;
+                margin-left:5px;
+                position: relative;
+                display: block;
+                z-index: 5;
+                div.lazy{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border:3px solid #fff;
+                    position:absolute;
+                    top:-35px;
+                }
+                span.name{
+                    color: $color_content;
+                    position: absolute;
+                    top:20px;
+                    left:0;
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

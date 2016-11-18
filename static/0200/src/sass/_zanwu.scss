@@ -1,0 +1,22 @@
+.zanwu{
+    //暂无
+    padding-bottom: 120px;
+    p.pic{
+        padding-top: 20px;
+        img{
+            margin: 0 auto;
+        }
+    }
+    p.text{
+        color: $color_content1;
+        line-height: 32px;
+    }
+    a{
+        display: block;
+        width: 125px;
+        line-height: 30px;
+        margin: 7px auto 0;
+        background: $color_red;
+        color: #fff;
+    }
+}

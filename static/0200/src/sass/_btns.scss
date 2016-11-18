@@ -1,0 +1,11 @@
+//按钮
+.btn{padding:0 10px;line-height:30px;background:#eee;color:#333;text-align:center;-webkit-border-radius: 0; -webkit-appearance: none; border: 0;}
+.btn-red{background:$color_red;color:#fff;
+	&:active{opacity:.8;}
+	&.btn-line{border:solid 1px $color_red;color:$color_red;background:none;}
+}
+.btn-default{background:#fff;color:$color_content;border:solid 1px $color_border;
+	&:active{opacity:.8;}
+	&.btn-line{border:solid 1px $color_border;color:$color_content;background:none;}
+}
+.btn-block{display:block;width:100%;}

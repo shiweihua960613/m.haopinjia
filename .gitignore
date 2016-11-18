@@ -1,0 +1,5 @@
+**/node_modules/
+**/node_modules.rar
+static/.project
+static/0200/node_modules/gulp-imagemin/node_modules/imagemin-gifsicle/node_modules/gifsicle/node_modules/bin-build/node_modules/download/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_transform.js
+static/0200/css/public.min.css
