@@ -51,6 +51,9 @@
 				<img data-original="img/dijiadaigou/pic4.jpg" src="http://icon.carimg.com//static/0200/blank.gif!c" class="lazy_img auto">
 			</div>
 		</div>
+		<div class="box5">
+			<button class="btn btn-red f15" data-href="http://m.jiajuol.com">+询问底价</button>
+		</div>
 		
 	</div>
 	
@@ -63,9 +66,14 @@
 			
 			if(jiaju.url_attr('isapp')==1){
 				//如果是app
-				wjkjNative.jumpTo(JSON.stringify({'wjapp_open_native':{'native_type':1}}));
+				$('.box5 button').click(function(){
+					wjkjNative.jumpTo(JSON.stringify({'wjapp_open_native':{'native_type':1}}));
+				})
 			}else{
-				
+				$('.box5 button').click(function(){
+					var _href = $(this).data('href');
+					window.location.href = _href;
+				})
 			};
 		});
 	</script>
