@@ -1,16 +1,5 @@
 @import "_color"; //颜色
 @import "_fn"; //方法
-@import "block/case-list";
-@import "block/img_view";
-@import "block/liebiaobiaoti"; //列表页标题
-@import "block/dingbushaixuan"; //列表页标题
-@import "block/optimal_list"; //左边图片，右边文字
-@import "block/top_tablink"; //顶部切换链接
-@import "block/huifu_list"; //个人中心-回复列表
-@import "block/dianping_list"; //个人中心-点评列表
-@import "block/huodong_list"; //商家-活动列表
-@import "block/shangpin_list"; //商家-商品列表
-@import "block/img_view"; //放大图
 .marginlr {
     margin: 0 0.3rem;
 }
@@ -85,6 +74,7 @@
             height: 44px;
             line-height: 44px;
             border-radius: 5px;
+            color: $bg_white;
         }
     }
 }

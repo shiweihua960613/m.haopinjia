@@ -703,7 +703,7 @@ $(function() {
             scrollTop: 0
         }, 500);
     });
-    $('<a href="https://static.meiqia.com/dist/standalone.html?eid=10466" class="iconfont icon-guanjiaowangtubiao11 go_phone" target="_blank"></a>').appendTo('body');
+	//$('<a href="https://static.meiqia.com/dist/standalone.html?eid=10466" class="iconfont icon- go_phone" target="_blank"></a>').appendTo('body');
     //返回顶部e
     var $go_top = $('.go_top');
     $(window).scroll(function() {

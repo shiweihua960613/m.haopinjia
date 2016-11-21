@@ -539,20 +539,20 @@ div.go_top {
     text-align: center;
     line-height: 40px;
     background-color: rgba(255,255,255,0.8);
-    color: #fff;
     cursor: pointer;
     @extend .no_select;
     @include tran;
-    border: 1px solid $color_title;
-    color: $color_title;
+    border: 1px solid #1bbd9e;
+    color: #1bbd9e;
 }
 
 a.go_phone {
     bottom: 100px;
-    display: block;
-    border-color: $color_red;
-    color: $color_red;
+    display: none !important;
+    border-color: #1bbd9e;
+    color: #1bbd9e;
 }
+
 //go_top/e
 //底部按钮-s
 
