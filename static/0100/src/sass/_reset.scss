@@ -33,6 +33,10 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-app
 input[type=text],input[type=number],input[type=tel],input[type=password],button{
     -webkit-appearance:none;
 }
+input,textarea,select{
+    -webkit-appearance: none;
+    border: 0;
+}
 html, body { overflow-x: hidden; }
 div.footer_empty{
     display: block;

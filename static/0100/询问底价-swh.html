@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style3.min.css" />
 </head>
 
-<body class="bg_white">
+<body class="">
 
 	<div class="content floor_price">
 		
@@ -41,13 +41,74 @@
 			</div>
 		</div>
 		
-		<div class="box2">
-			<div class="cont1">
-				<dl>
-					<dt></dt>
-					<dd></dd>
+		<div class="box2"><form action="http://www.jiajuol.com/api/0200/crm_apply.php" method="post" id="yuyue">
+			<div class="cont1 paddinglr bg_white">
+				<dl class="box">
+					<dt>商品</dt>
+					<dd class="flex1">
+						<input type="text" name="" id="" value="" placeholder="请输入询价的品牌和型号" validate="required"/>
+					</dd>
+				</dl>
+				<dl class="box">
+					<dt>价格</dt>
+					<dd class="flex1">
+						<input type="number" name="" id="" value="" placeholder="当前的价格" validate="required|number"/>
+					</dd>
+				</dl>
+				<dl class="box">
+					<dt>地区</dt>
+					<dd class="flex1">
+						<select name="province" id="prov" validate="required" placeholder="省市">
+			                <option value="">省/市</option>
+			           </select>
+			           <select name="city" id="city" validate="required" placeholder="市区">
+			                <option value="">市/区</option>
+			            </select>
+					</dd>
 				</dl>
 			</div>
+			<div class="cont2 bg_white border_b">
+				<ul class="clearfix">
+					<li class="fl pr">
+						<img src="img/dijiadaigou/pic1.jpg"/>
+						<span class="pa tc">
+							<i class="iconfont icon-guanbi"></i>
+						</span>
+					</li>
+					<li class="fl pr">
+						<img src="img/dijiadaigou/pic1.jpg"/>
+						<span class="pa tc">
+							<i class="iconfont icon-guanbi"></i>
+						</span>
+					</li>
+					<dl class="fl tc" id="imgUpload">
+						<dt>+</dt>
+						<dd>上传图片</dd>
+					</dl>
+				</ul>
+			</div>
+			
+			<div class="cont3 bg_white border_b border_t mt15">
+				<h4 class="border_b paddinglr">接收底价的手机号码</h4>
+				<dl class="box marginlr border_b">
+					<dt class="border_r"><i class="iconfont icon-shouji"></i></dt>
+					<dd class="flex1">
+						<input type="tel" name="" id="" value="" placeholder="请输入手机号码" validate="required|tel"/>
+					</dd>
+				</dl>
+				<dl class="box marginlr border_b">
+					<dt class="border_r"><i class="iconfont icon-yaoshi"></i></dt>
+					<dd class="flex1">
+						<input type="number" name="" id="" value="" placeholder="请输入验证码" validate="required"/>
+						<p class="fr tc">获取验证码</p>
+					</dd>
+				</dl>
+				<div class="paddinglr">
+					<input type="submit" name="" id="" value="提交信息" />
+					<p class="text">服务时间：工作日 09~18点。其他时间的询价信息会在工作日统一处理。</p>
+				</div>
+			</form></div>
+			
 		</div>
 		
 	</div>
@@ -56,20 +117,52 @@
 	
 	<script src="../common/jquery-3.0.0.min.js"></script>
 	<script src="js/public.js"></script>
+	<script src="http://www.jiajuol.com/js/citylist_all.js"></script>
+	<script src="http://m.jiajuol.com/static/common/jquery.form.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
-			
-			if(jiaju.url_attr('isapp')==1){
-				//如果是app
-				$('.box5 button').click(function(){
-					wjkjNative.jumpTo(JSON.stringify({'wjapp_open_native':{'native_type':1}}));
-				})
-			}else{
-				$('.box5 button').click(function(){
-					var _href = $(this).data('href');
-					window.location.href = _href;
-				})
-			};
+			//报名预约
+        	jiaju.yuyue();
+        	InitSelecter(document.getElementById("prov"),document.getElementById("city"),1,1);
+        	$('.floor_price .box2 .cont3 dl dd p').click(function(){
+        		//获取验证码
+        	});
+        	//上传图片
+		    $('#imgUpload').imgUpload({
+		        url:'/api/upload/upload.php',
+		        data:{
+		            action:'comment_cover'
+		        },
+		        before:function(e,ev){
+		            if($('.floor_price .box2 .cont2 li').length>=3){
+		                $('.floor_price .box2 .cont2 dl').hide();
+		            }
+		            //前端检测大小
+		            /*if(window.FileReader) {
+		                var file=ev.target.files[0];
+		                if(file.size>=5242880){
+		                    notie.alert(3,'上传大小不能超过5M！', 1.5);
+		                    e.removeClass('disabled');
+		                    return false;
+		                }
+		            }
+		            e.children('span').text('上传中...');*/
+		        },
+		        success:function(e,data){//当前对象，返回的完整数据
+		            if (data.info.code == 100) {
+		                var _url=data.server+data.id+'!zs';
+		                var html = '<li class="fl pr" id="'+ data.id +'"><img src="'+ _url +'"><span class="pa tc"><i class="iconfont icon-guanbi"></i></span></li>'
+		                $('.floor_price .box2 .cont2 ul').prepend(html);
+		            }else {
+		                notie.alert(3,data.info.message, 1.5);
+		            }
+		            //e.children('span').text('添加照片');
+		        },
+		        error:function(e){//当前对象
+		            notie.alert(3,'接口异常', 1.5);
+		            //e.children('span').text('添加照片');
+		        }
+		    })
 		});
 	</script>
 </body>
