@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="wap-font-scale" content="no">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="format-detection" content="email=no,telephone=no" />
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>好品家</title>
+	<script src="../common/change_view.js"></script>
+	<script type="text/javascript">change.action(640);</script>
+	<link rel="stylesheet" type="text/css" href="css/public.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style3.min.css" />
+</head>
+
+<body class="bg_white">
+
+	<div class="content daigou">
+		
+		<div class="box1 lazy">
+			 <img data-original="img/dijiadaigou/pic1.jpg" src="http://icon.carimg.com//static/0200/blank.gif!c" class="lazy_img auto">
+		</div>
+		
+		<div class="box2">
+			<dl class="title tc">
+				<dt class="f15">花1分钟时间，省下好几千</dt>
+				<dd><span class="pr"><i class="iconfont icon-27kongxintaoxin"></i></span></dd>
+			</dl>
+			<div class="lazy">
+				<img data-original="img/dijiadaigou/pic2.jpg" src="http://icon.carimg.com//static/0200/blank.gif!c" class="lazy_img auto">
+			</div>
+		</div>
+		
+		<div class="box3">
+			<dl class="title tc">
+				<dt class="f15">顶级合作，直达底价</dt>
+				<dd><span class="pr"><i class="iconfont icon-27kongxintaoxin"></i></span></dd>
+			</dl>
+			<div class="lazy">
+				<img data-original="img/dijiadaigou/pic3.jpg" src="http://icon.carimg.com//static/0200/blank.gif!c" class="lazy_img auto">
+			</div>
+		</div>
+		<div class="box4">
+			<dl class="title tc">
+				<dt class="f15">同样的品质，更低的价格</dt>
+				<dd><span class="pr"><i class="iconfont icon-27kongxintaoxin"></i></span></dd>
+			</dl>
+			<div class="lazy">
+				<img data-original="img/dijiadaigou/pic4.jpg" src="http://icon.carimg.com//static/0200/blank.gif!c" class="lazy_img auto">
+			</div>
+		</div>
+		<div class="box5">
+			<button class="btn btn-red f15" data-href="http://m.jiajuol.com">+询问底价</button>
+		</div>
+		
+	</div>
+	
+	
+	
+	<script src="../common/jquery-3.0.0.min.js"></script>
+	<script src="js/public.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			
+			if(jiaju.url_attr('isapp')==1){
+				//如果是app
+				$('.box5 button').click(function(){
+					wjkjNative.jumpTo(JSON.stringify({'wjapp_open_native':{'native_type':1}}));
+				})
+			}else{
+				$('.box5 button').click(function(){
+					var _href = $(this).data('href');
+					window.location.href = _href;
+				})
+			};
+		});
+	</script>
+</body>
+</html>
