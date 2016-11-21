@@ -10,33 +10,32 @@
 @import "block/dianping_list"; //个人中心-点评列表
 @import "block/huodong_list"; //商家-活动列表
 @import "block/shangpin_list"; //商家-商品列表
-@import "block/img_view";//放大图
-
+@import "block/img_view"; //放大图
 .marginlr {
     margin: 0 0.3rem;
 }
 .paddinglr {
     padding: 0 0.3rem;
 }
-
-.daigou{
-    
-    .box1{
+.daigou {
+    //底价代购
+    .box1 {
         width: 6.4rem;
         height: 6.7rem;
     }
-    dl.title{
+    dl.title {
         padding-top: 25px;
-        dt{
+        dt {
             color: $color_title;
             line-height: 1.5em;
         }
-        dd{
+        dd {
             color: $color_content1;
             line-height: 21px;
-            span{
-                display:inline-block; 
-                &:before,&:after{
+            span {
+                display: inline-block;
+                &:before,
+                &:after {
                     width: 0.7rem;
                     height: 1px;
                     content: '';
@@ -45,47 +44,104 @@
                     background: $color_content1;
                     top: 10px;
                 }
-                &:before{
+                &:before {
                     left: -0.8rem;
                 }
-                &:after{
+                &:after {
                     right: -0.8rem;
                 }
             }
         }
     }
-    .box2{
-        .lazy{
+    .box2 {
+        .lazy {
             width: 5.04rem;
             height: 5.04rem;
             margin: 20px auto 0;
         }
     }
-    .box3{
+    .box3 {
         padding-bottom: 21px;
         background: #f4f4f4;
         margin-top: 30px;
-        .lazy{
+        .lazy {
             width: 5.8rem;
             height: 3.48rem;
             margin: 30px auto 0;
         }
     }
-    .box4{
-        .lazy{
+    .box4 {
+        .lazy {
             width: 5.8rem;
             height: 3.15rem;
             margin: 14px auto 0;
         }
     }
-    .box5{
+    .box5 {
         margin: 25px 0.3rem;
-        button{
+        button {
             background-color: #1bbd9e;
             width: 100%;
             height: 44px;
             line-height: 44px;
             border-radius: 5px;
+        }
+    }
+}
+.floor_price {
+    //询问底价
+    .box1{
+        height: 76px;
+        background: #fffcf1;
+        .size{
+            width: 6rem;
+            margin: 0 auto;
+            padding-top: 15px;
+            div{
+                color: $bg_white;
+                width: 18px;
+                height: 18px;
+                font-size: 12px;
+                line-height: 18px;
+                border-radius: 50%;
+                background-color: $color_content1;
+                position: relative;
+                i{
+                    display: none;
+                    font-size: 12px;
+                }
+                &.ok{
+                    background-color: #28bda0;
+                    span{
+                        display: none;
+                    }
+                    i.iconfont{
+                        display: block;
+                    }
+                    p{
+                        color: #28bda0;
+                    }
+                }
+                p{
+                    line-height: 28px;
+                    white-space: nowrap;
+                    color: $color_content1;
+                    position: absolute;
+                    left:50%;
+                    @include transform(translate(-50%,0));
+                }
+            }
+            p.flex1{
+                height: 2px;
+                background: $color_content1;
+                margin-top: 8px;
+                &.ok{
+                    background-color: #28bda0;
+                }
+            }
+        }
+        .name{
+            
         }
     }
 }
